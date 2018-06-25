@@ -8,10 +8,10 @@ start-dev:
 down-dev:
 	docker-compose -f dev.yml down
 
-#### Down dev
-.PHONY: down-dev
+#### Down dev and remove volumes
+.PHONY: down-dev-v
 down-dev:
-	docker-compose -f dev.yml down
+	docker-compose -f dev.yml down -v
 
 #### Test
 .PHONY: test
